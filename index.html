@@ -62,7 +62,28 @@
     color: #863dfa;
     font-style: italic;
 }
+.animated-text {
+        color: darksalmon;
+        animation: colorChange 2s infinite;
+    }
 
+    @keyframes colorChange {
+        0% {
+            color:crimson;
+        }
+        25% {
+            color: green;
+        }
+        50% {
+            color: purple;
+        }
+        75% {
+            color: orange;
+        }
+        100% {
+            color: darksalmon;
+        }
+    }
 /* Hero Section */
 .hero {
     background-color: #f8f9fa;
@@ -300,7 +321,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 d-flex flex-column justify-content-center">
-                    <h1 class="head" style="color: blue;">WE MAKE YOUR IDEA'S<br><span style="color:darksalmon;"> INTO
+                    <h1 class="head" style="color: blue;">WE MAKE YOUR IDEA'S<br><span class="animated-text" style="color:darksalmon;"> INTO
                             REALITY</span></h1>
                     <p>Some quick example text to build on the card title and make up the bulk of the card's
                         content.Some quick example text to build on the card title and make up the bulk of the card's
@@ -350,8 +371,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="images/image (1).png" alt="Feature Image" class="img-fluid rounded-circle img-top mb-3 mb-lg-0">
-                    <!-- <img src="images/imagebottom.png" alt="Feature Image" class="img-fluid rounded-circle img-bottom"> -->
+                    <!-- <img src="images/image (1).png" alt="Feature Image" class="img-fluid rounded-circle img-top mb-3 mb-lg-0"> -->
+                    <img src="images/imagetop.png" alt="Feature Image" class="img-fluid rounded-circle img-top mb-3 mb-lg-0">
+                    <img src="images/imagebottom.png" alt="Feature Image" class="img-fluid rounded-circle img-bottom">
                 </div>
             </div>
         </div>
