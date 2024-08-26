@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jillion Technologies</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+   /* General Styles */
+.testimonial-section {
+    background-color: white;
+    padding: 50px 0;
+}
+.testimonial {
+    text-align: center;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.testimonial blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+}
+
+.testimonial footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: green;
+    font-style: italic;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.carousel-indicators li {
+    background-color: blueviolet;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.hero .head {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+/* Features Section */
+.features img {
+    width: 100%;
+    height: auto;
+}
+
+/* Carousel Animations */
+@keyframes moveLeftRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.lady {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    animation: moveLeftRight 3s infinite;
+}
+
+/* Join-Unjoin Animations */
+@keyframes joinUnjoin {
+    0% {
+        transform: translateY(-100px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes joinUnjoinReverse {
+    0% {
+        transform: translateY(100px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100px);
+    }
+}
+
+.img-top {
+    animation: joinUnjoin 3s infinite;
+    position: relative;
+}
+
+.img-bottom {
+    animation: joinUnjoinReverse 3s infinite;
+    position: relative;
+}
+
+/* Products Section */
+.card-img-top {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    margin: 20px auto;
+    border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+    background-image: linear-gradient(to right, #863dfa, rgb(35, 4, 172));
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-column h5 {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-column p, .footer-column a {
+    color: white;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .img-top,
+    .img-bottom {
+        width: 100px;
+        height: 100px;
+    }
+    .testimonial img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .testimonial blockquote {
+        font-size: 1.1rem;
+        padding: 10px;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+   
+
+    .navbar-toggler {
+        margin: 0;
+    }
+    
+    .navbar-collapse {
+        margin-top: 15px;
+    }
+    
+    .hero .head {
+        font-size: 1.8rem;
+    }
+    
+    .testimonial img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .testimonial blockquote {
+        font-size:1rem;
+        padding: 8px;
+    }
+
+    .carousel-indicators li {
+        width: 8px;
+        height: 8px;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 8px;
+    }
+
+    .features img {
+        max-width: 100%;
+    }
+    
+    .card-img-top {
+        height: 120px;
+        width: 120px;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial blockquote {
+        font-size: 0.5rem;
+        padding:4px;
+    }
+
+    .carousel-indicators li {
+        width: 6px;
+        height: 6px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        padding: 6px;
+    }
+}
+
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a style="color: blueviolet; margin-bottom: -20px;" class="navbar-brand" href="#">
+                <bold>Jillion Technologies</bold>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" style="margin-top: 20px;">
+                        <a class="nav-link " style="color: blueviolet; " href="#">Home</a>
+                    </li>
+                    <li class="nav-item" style="margin-top: 20px;">
+                        <a class="nav-link" style="color: blueviolet; " href="#">Features</a>
+                    </li>
+                    <li class="nav-item" style="margin-top: 20px;">
+                        <a class="nav-link" style="color: blueviolet;" href="#">Products</a>
+                    </li>
+                    <li class="nav-item" style="margin-top: 20px;">
+                        <a class="nav-link" style="color: blueviolet;" href="#">Testimonials</a>
+                    </li>
+                    <li class="nav-item" style="margin-top: 20px;">
+                        <a class="nav-link" style="color: blueviolet;" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column justify-content-center">
+                    <h1 class="head" style="color: blue;">WE MAKE YOUR IDEA'S<br><span style="color:darksalmon;"> INTO
+                            REALITY</span></h1>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's
+                        content.Some quick example text to build on the card title and make up the bulk of the card's
+                        content</p>
+                    <div>
+                        <a href="#" class="btn btn-primary me-2"
+                            style="background-color: blue;color: white; margin-left:0px;">Get Started</a>
+                        <a href="#" class="btn btn-outline-primary"
+                            style="color: blueviolet;border: 1px solid blueviolet;">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img class="lady" src="images/girl.png" alt="Hero Image" class="img-fluid">
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Features</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/boy.png" alt="Feature Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <h4>Card Title</h4>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's
+                            content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="feature-content">
+                        <h4>Card Title</h4>
+                        <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="images/imagetop.png" alt="Feature Image" class="img-fluid rounded-circle img-top mb-3 mb-lg-0">
+                    <img src="images/imagebottom.png" alt="Feature Image" class="img-fluid rounded-circle img-bottom">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    </section>
+    <section class="features py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="images/boy.png" alt="Feature Image" class="img-fluid">
+                </div>
+                <div class="col-lg-6">
+                    <h4>Card Title</h4>
+                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+   
+    <section class="products py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Products</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card w-100 h-100">
+                        <img src="images/product6.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card w-100 h-100">
+                        <img src="images/product1.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card w-100 h-100">
+                        <img src="images/product7.jpeg" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+               
+
+<!-- testimonal section -->
+<div class="container">
+    <h2 class="text-center mb-5" style="color:black;">Testimonials</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active">
+                <div class="testimonial text-center">
+                    <img src="images/woman3.jpeg" alt="Customer Image" class="rounded-circle mb-4">
+                    <blockquote class="blockquote">
+                        <p>Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia.<br>
+                        Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt.</p>
+                    </blockquote>
+                    <footer class="blockquote-footer">
+                        <cite>PAULA WILSON</cite>, <span class="text-muted">Media Analyst</span>
+                    </footer>
+                </div>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+        <!-- Controls -->
+        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+        <!-- Indicators -->
+        <ul class="carousel-indicators justify-content-center mt-4 ">
+            <li data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" style="font-size: 40px; position: relative; top:80px; left: 10px;">.</li>
+            <li data-bs-target="#testimonialCarousel" data-bs-slide-to="1" style="font-size: 40px; margin-top: 60px; position: relative; top:20px; left: 10px">.</li>
+            <li data-bs-target="#testimonialCarousel" data-bs-slide-to="2" style="font-size: 40px; margin-top: 60px; position: relative; top:20px; left: 10px">.</li>
+        </ul>
+    </div>
+</div>
+<br>
+<br>
+
+
+    <section class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center">
+                    <img src="/images/contact.png" alt="Contact Image" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Your message"></textarea>
+                        </div>
+                        <button style="background-color:darkslateblue; color: white; border: 2px solid darkslateblue;"
+                            type="submit" class="btn btn-primary ">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section -->
+
+    <footer class="footer">
+        <div class="container" >
+            <div class="row text-center">
+                <div class="col-md-3 footer-column text-decoration-none">
+                    <h5>CONTACT US</h5>
+                    <p>E mail</p>
+                    <p>contact@JILLIONTECHNOLOGIES.com</p>
+                    <p>Phone</p>
+                    <p>123456789</p>
+                    <p>Address</p>
+                    <p>C-260, Sector-63, Noida, UP-201301,</p>
+                </div>
+                <div class="col-md-3 footer-column" style="text-decoration: none";>
+                    <h5>COMPANY</h5>
+                    <a href="#">About Us</a><br>
+                    <a href="#">Services</a><br>
+                    <a href="#">Portfolio</a><br>
+                    <a href="#">Development Process</a><br>
+                    <a href="#">Career</a>
+                </div>
+                <div class="col-md-3 footer-column text-decoration-none">
+                    <h5>SERVICE</h5>
+                    <a href="#">Website Development</a><br>
+                    <a href="#">Mobile App Development</a><br>
+                    <a href="#">E-commerce Development</a><br>
+                    <a href="#">Customer Software Development</a>
+                </div>
+                <div class="col-md-3 footer-column text-decoration-none">
+                    <h5>SUPPORT</h5>
+                    <a href="#">Contact</a><br>
+                    <a href="#">Term & Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
